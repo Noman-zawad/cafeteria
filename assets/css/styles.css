@@ -23,14 +23,17 @@ h1 {
   font-family: var(--primary-font);
   font-size: 49px;
   font-weight: 700;
-  line-height: 45px;
+  line-height: 49.5px;
   letter-spacing: normal;
+  margin: 0;
 }
 h2 {
   font-family: var(--primary-font);
   font-size: 34px;
   font-weight: 700;
-  line-height: 26.4px;
+  line-height: 36.4px;
+  margin: 0 0 10px;
+  text-transform: capitalize;
 }
 h4 {
   font-family: var(--accent-font);
@@ -38,17 +41,20 @@ h4 {
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 15px;
+  margin: 0 0 15px;
+  color: var(--orange);
 }
 h3 {
   font-family: var(--primary-font);
   font-size: 25px;
   font-weight: 700;
-  line-height: 16.5;
+  line-height: 26.5px;
+  margin: 0 0 10px;
 }
 p {
   font-family: var(--primary-font);
   font-size: 16px;
-  line-height: 22.4px;
+  line-height: 20.4px;
   font-weight: 400;
 }
 a {
@@ -74,6 +80,23 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
+  z-index: 99;
+}
+footer {
+  padding: 50px 0 20px;
+  background: #282624 url(../../assets/images/divider-2.png) center top repeat-x;
+}
+footer h3 {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+footer p {
+  color: rgb(145, 153, 157);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22.4px;
 }
 /* classes */
 .nav-wrapper {
@@ -93,10 +116,10 @@ header {
 .nav-menu {
   list-style-type: none;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   padding: 0;
   margin: 0;
+  gap: 10px;
 }
 .navbar .left-nav,
 .navbar .center-nav,
@@ -139,4 +162,135 @@ header {
   height: 100vh;
   background: url(../../assets/images/image-1.jpg) center repeat-x;
   background-size: cover;
+  color: white;
+  position: relative;
+}
+#banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 1200px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  z-index: 2;
+  padding: 100px 0 50px;
+}
+.container .sub-header {
+  text-align: center;
+  font-family: var(--primary-font);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+}
+#banner .container h1 {
+  margin: 15px 0;
+}
+#banner .container .divider {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  height: 20px;
+  background-color: transparent;
+  width: 20%;
+}
+.banner-text {
+  font-size: 20px;
+  font-style: italic;
+  font-family: var(--primary-font);
+  font-weight: 500;
+  line-height: 25px;
+}
+.cardgroup {
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.cardgroup .card {
+  padding: 35px 0px;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 0 10px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 5px 15px 0px;
+}
+.cardgroup .card img {
+  max-width: 100%;
+  width: 226px;
+  height: 223px;
+}
+.cardgroup .card .card-content {
+  padding: 0px 30px;
+  text-align: center;
+}
+.menu-group {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-card {
+  width: 33.33%;
+  margin: 0 5px;
+  background-color: white;
+  position: relative;
+}
+.menu-card .menu-img {
+  width: 100%;
+  height: auto;
+}
+.menu-card .menu-content {
+  padding: 38px 30px 21px;
+  text-align: center;
+  background-color: white;
+  background-position: 110% 110%;
+  background-repeat: no-repeat;
+  background-image: url(../../assets/images/transparent-image-1.png);
+}
+#menu {
+  position: relative;
+  background-color: white;
+  padding: 50px 0px 100px;
+}
+#menu::before {
+  height: 620px;
+  top: 510px;
+  background-image: url(../../assets/images/image-3.jpg);
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.menu-card .menu-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.footer-row {
+  text-align: center;
 }

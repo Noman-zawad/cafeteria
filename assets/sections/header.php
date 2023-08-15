@@ -19,6 +19,9 @@
               <li class="nav-items current">
                 <a href="">Menu</a>
               </li>
+              <li class="nav-items current">
+                <a href="">Service</a>
+              </li>
             </ul>
           </div>
           <div class="center-nav">
@@ -28,6 +31,9 @@
             <ul class="nav-menu">
               <li class="nav-items current">
                 <a href="">Order Now</a>
+              </li>
+              <li class="nav-items current">
+                <a href="">Login</a>
               </li>
             </ul>
           </div>
