@@ -9,7 +9,6 @@
                 <th>Menu Item</th>
                 <th>Price</th>
                 <th>Status</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -19,10 +18,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -30,10 +26,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -41,10 +34,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -52,10 +42,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -63,10 +50,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -74,10 +58,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -85,10 +66,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -96,10 +74,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -107,10 +82,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -118,10 +90,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -129,10 +98,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -140,10 +106,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -151,10 +114,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <tr>
                 <td>1</td>
@@ -162,10 +122,7 @@
                 <td>John Doe</td>
                 <td>Pizza</td>
                 <td>$10.00</td>
-                <td>Processing</td>
-                <td>
-                    <button>Completed</button>
-                </td>
+                <td>Completed</td>
             </tr>
             <!-- Add more rows here -->
         </tbody>

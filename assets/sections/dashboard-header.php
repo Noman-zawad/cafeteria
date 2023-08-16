@@ -20,8 +20,9 @@
                     <div class="sidebar-content">
                         <div class="menu-wrapper">
                             <ul class="vertical-menu">
-                                <li class="menu-link"><a href="">Orders</a></li>
-                                <li class="menu-link"><a href="">Completed Orders</a></li>
+                                <li class="menu-link"><a href="./dashboard.php">Orders</a></li>
+                                <li class="menu-link"><a href="./complete-order.php">Completed Orders</a></li>
+                                <li class="menu-link"><a href="./menu.php">Menu</a></li>
                             </ul>
                         </div>
                     </div>
@@ -31,11 +32,9 @@
                 <div class="dashboard-contant-wrapper">
                     <div class="dashboard-header">
                         <div>
-                            <h2>Orders</h2>
-                        </div>
-                        <div>
                             <h3>Username</h3>
                             <p>Role</p>
+                            <button><a href="login.html">Logout</a></button>
                         </div>
                     </div>
                     <div class="dashboard-inner">
