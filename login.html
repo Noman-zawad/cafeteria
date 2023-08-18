@@ -12,12 +12,20 @@
       <div class="container">
         <div class="login-card">
           <h3>WELCOME</h3>
-          <form action="">
-            <input type="text" name="" id="" placeholder="Enter User Name" />
-            <input type="password" name="" id="" placeholder="Enter Password" />
-            <button type="submit" class="btn">
-              <a href="./dashboard.php">Login</a>
-            </button>
+          <form action="./assets/functions/login.php" method="post">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter User Name"
+            />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter Password"
+            />
+            <button type="submit" class="btn">Login</button>
           </form>
         </div>
       </div>
