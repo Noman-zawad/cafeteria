@@ -1,5 +1,12 @@
-<?php include("./assets/sections/dashboard-header.php"); ?>
-<div class="container">
+<?php 
+    session_start();
+    if (!isset($_SESSION['stuff_name'])) {
+        header("Location: ./login.html"); // Redirect to the login page if session is not started
+        exit();
+    }
+    include("./assets/sections/dashboard-header.php"); 
+?>
+<div class="dashboard-header">
     <button>Add New</button>
 </div>
 <table class="dashboard-table">

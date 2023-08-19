@@ -1,4 +1,11 @@
-<?php include("./assets/sections/dashboard-header.php"); ?>
+<?php 
+session_start();
+if (!isset($_SESSION['stuff_name'])) {
+    header("Location: ./login.html"); // Redirect to the login page if session is not started
+    exit();
+}
+include("./assets/sections/dashboard-header.php"); 
+?>
 
 <table class="dashboard-table">
         <thead>

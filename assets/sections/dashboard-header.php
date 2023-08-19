@@ -31,10 +31,7 @@
             <div class="dashboard-content">
                 <div class="dashboard-contant-wrapper">
                     <div class="dashboard-header">
-                        <div>
-                            <h3>Username</h3>
-                            <p>Role</p>
-                            <button><a href="login.html">Logout</a></button>
-                        </div>
+                            <h3>Welcome Back <?= $_SESSION["stuff_name"] ?></h3>
+                            <button class="btn"><a href="login.html">Logout</a></button>
                     </div>
                     <div class="dashboard-inner">

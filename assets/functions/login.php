@@ -1,20 +1,22 @@
 <?php
 // Include the database connection
-include_once('db_connection.php');
+include_once('../../connect.php');
 
-if ($_SERVER["POST"]) {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $query = "SELECT * FROM user WHERE username = '$username' AND password = '$password'";
+    $query = "SELECT * FROM staff WHERE staff_name = '$username' AND staff_password = '$password'";
 
     // Execute the query
     $result = mysqli_query($conn, $query);
 
     // Check if the user exists and has provided valid credentials
-    if (mysqli_num_rows($result) === 1) {
+    if ($result) {
+        session_start(); // Start the session
+        $_SESSION["stuff_name"] = $username;
         // Successful login
-        header("Location: ./");
+        header("Location: ../../dashboard.php");
         exit();
     } else {
         // Invalid credentials
