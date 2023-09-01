@@ -1,4 +1,11 @@
-<?php include('./assets/sections/header.php'); ?>
+<?php 
+    include('./assets/sections/header.php'); 
+    include('./connect.php');
+
+    // Fetch menu items from the database
+    $query = "SELECT * FROM menu";
+    $result = mysqli_query($conn, $query);
+?>
 <section id="banner" class="wrapper">
     <div class="container">
         <img src="./assets/images/logo.png" alt="">
@@ -49,33 +56,29 @@
             Lorem Ipsum has been the industry's stan
         </p>
         <div class="menu-group">
-            <div class="menu-card">
-                <img src="./assets/images/image-7-364x250.jpg" alt="" class="menu-img">
-                <div class="menu-content">
-                    <h3>Menu Name</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                    <p class="pricing">Order $2.65</p>
-                </div>
-                <a class="menu-link" href=""></a>
-            </div>
-            <div class="menu-card">
-                <img src="./assets/images/image-7-364x250.jpg" alt="" class="menu-img">
-                <div class="menu-content">
-                    <h3>Menu Name</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                    <p class="pricing">Order $2.65</p>
-                </div>
-                <a class="menu-link" href=""></a>
-            </div>
-            <div class="menu-card">
-                <img src="./assets/images/image-7-364x250.jpg" alt="" class="menu-img">
-                <div class="menu-content">
-                    <h3>Menu Name</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
-                    <p class="pricing">Order $2.65</p>
-                </div>
-                <a class="menu-link" href=""></a>
-            </div>
+            <?php
+            if($result){
+                while($row = mysqli_fetch_assoc($result)){
+                    $menuName = $row['menu_name'];
+                    $menuDescription = $row['menu_disc'];
+                    $menuPrice = $row['menu_price'];
+            ?>
+                   <div class="menu-card">
+                       <img src="./assets/images/image-7-364x250.jpg" alt="" class="menu-img">
+                       <div class="menu-content">
+                           <h3><?=$menuName?></h3>
+                           <p><?=$menuDescription?></p>
+                           <p class="pricing">Order $<?=$menuPrice?></p>
+                       </div>
+                       <a class="menu-link" href=""></a>
+                   </div>
+            <?php
+                }
+            }
+            else{
+                echo" no items";
+            }
+            ?>
         </div>
     </div>
 </section>

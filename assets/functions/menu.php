@@ -2,6 +2,7 @@
 // Include the database connection
 include_once('../../connect.php');
 
+echo"came into the request";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $food_name = $_POST["food_name"];
     $food_disc = $_POST["food_disc"];
@@ -14,10 +15,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // Check if the user exists and has provided valid credentials
     if ($result) {
+        // echo"successfull";
+        echo"success";
         header("Location: ../../menu.php");
         exit();
     } else {
         // Invalid credentials
         echo "An Error Occured ." .  mysqli_error($conn);
     }
+}
+else{
+    echo"no code run";
 }

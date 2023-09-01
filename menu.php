@@ -11,7 +11,7 @@ $query = "SELECT * FROM menu";
 $result = mysqli_query($conn, $query);
 ?>
 <div class="dashboard-header">
-    <button id="new_menu" class="btn">Add New</button>
+    <button onclick="redirectToMenuPage()" class="btn">Add New</button>
     <p class="database-message"> Data Added Successful</p>
 </div>
 <table class="dashboard-table">
@@ -40,12 +40,4 @@ $result = mysqli_query($conn, $query);
         ?>
     </tbody>
 </table>
-<div class="model-wrapper">
-    <form action="./assets/functions/menu.php" method="post" class="model-form">
-        <input type="text" placeholder="Food Name" name="food_name" id="food_name">
-        <input type="number" name="food_price" id="food_price" placeholder="Food Price">
-        <textarea name="food_disc" id="food_disc" cols="30" rows="10" placeholder="Food Disctiption"></textarea>
-        <button type="submit" class="btn">Add</button>
-    </form>
-</div>
 <?php include("./assets/sections/dashboard-footer.php"); ?>
