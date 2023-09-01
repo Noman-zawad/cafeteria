@@ -59,24 +59,18 @@
             <?php
             if($result){
                 while($row = mysqli_fetch_assoc($result)){
-                    $menuName = $row['menu_name'];
-                    $menuDescription = $row['menu_disc'];
-                    $menuPrice = $row['menu_price'];
             ?>
                    <div class="menu-card">
                        <img src="./assets/images/image-7-364x250.jpg" alt="" class="menu-img">
                        <div class="menu-content">
-                           <h3><?=$menuName?></h3>
-                           <p><?=$menuDescription?></p>
-                           <p class="pricing">Order $<?=$menuPrice?></p>
+                           <h3><?=$row['menu_name']?></h3>
+                           <p><?=$row['menu_disc']?></p>
+                           <p class="pricing">Order $<?=$row['menu_price']?></p>
                        </div>
-                       <a class="menu-link" href=""></a>
+                       <a class="menu-link" href="./assets/forms/new-order.php?menu_id=<?=$row['menu_id']?>"></a>
                    </div>
             <?php
                 }
-            }
-            else{
-                echo" no items";
             }
             ?>
         </div>

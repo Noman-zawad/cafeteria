@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Aug 22, 2023 at 07:48 AM
--- Server version: 5.7.39
--- PHP Version: 7.4.33
+-- Host: 127.0.0.1
+-- Generation Time: Sep 01, 2023 at 09:10 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,7 +32,7 @@ CREATE TABLE `menu` (
   `menu_name` varchar(255) NOT NULL,
   `menu_price` int(10) NOT NULL,
   `menu_disc` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `menu`
@@ -41,7 +41,11 @@ CREATE TABLE `menu` (
 INSERT INTO `menu` (`menu_id`, `menu_name`, `menu_price`, `menu_disc`) VALUES
 (1, 'food ', 123, '123'),
 (2, 'food ', 132, '132'),
-(3, 'food ', 2342, 'l;aksdjflk');
+(3, 'food ', 2342, 'l;aksdjflk'),
+(4, 'new food ', 1234, 'asdfasdf'),
+(5, 'new new food', 135546, 'new new new new'),
+(6, 'old new ', 35346456, 'asdfasdfasdf'),
+(7, 'old new new', 988776, 'a;lsfjdksfdj');
 
 -- --------------------------------------------------------
 
@@ -55,7 +59,7 @@ CREATE TABLE `orders` (
   `st_id` int(10) NOT NULL,
   `menu_id` int(11) NOT NULL,
   `order_status` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -67,7 +71,7 @@ CREATE TABLE `staff` (
   `id` int(11) NOT NULL,
   `staff_name` varchar(255) DEFAULT NULL,
   `staff_password` varchar(8) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Dumping data for table `staff`
@@ -92,7 +96,8 @@ ALTER TABLE `menu`
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`order_id`);
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `fk_orders_menu` (`menu_id`);
 
 --
 -- Indexes for table `staff`
@@ -108,7 +113,7 @@ ALTER TABLE `staff`
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
-  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -121,6 +126,16 @@ ALTER TABLE `orders`
 --
 ALTER TABLE `staff`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `fk_orders_menu` FOREIGN KEY (`menu_id`) REFERENCES `menu` (`menu_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
