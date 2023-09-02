@@ -62,6 +62,7 @@ $result = mysqli_query($conn, $query);
             } else {
                 echo "An error occurred while fetching menu data: " . mysqli_error($conn);
                 }
+                $orderNumber++;
             }
                 } else {
                     echo "An error occurred while fetching order data: " . mysqli_error($conn);
