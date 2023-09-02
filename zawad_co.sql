@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2023 at 09:10 PM
+-- Generation Time: Sep 02, 2023 at 08:34 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.0.28
 
@@ -60,6 +60,13 @@ CREATE TABLE `orders` (
   `menu_id` int(11) NOT NULL,
   `order_status` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `st_name`, `st_id`, `menu_id`, `order_status`) VALUES
+(1, 'noman', 1930779, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -119,7 +126,7 @@ ALTER TABLE `menu`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `staff`

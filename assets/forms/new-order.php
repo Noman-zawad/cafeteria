@@ -36,6 +36,7 @@
     <p><strong><?=$menuName?></strong> will cost you <strong>$<?= $menuPrice ?></strong> now fill this from to confirm your order</p>
     <form action="../functions/order.php" method="POST" class="model-form" id="new_menu_form">
         <input type="text" placeholder="Student Name" name="student_name" id="student_name">
+         <input type="hidden" name="menu_id" value="<?=$menu_id?>">
         <input type="number" name="student_id" id="student_name" placeholder="Student id">
        
         <button type="submit" class="btn">Place Order</button>
